@@ -14,6 +14,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import com.android.chatting.screens.login.Login
+import com.android.chatting.screens.register.Register
 import com.android.chatting.ui.theme.ChattingTheme
 import com.android.chatting.ui.utils.LocalNavController
 
@@ -46,6 +47,11 @@ fun ChattyNavHost(navController: NavHostController) {
         ) {
             Login()
         }
+        composable(
+            AppScreen.REGISTER
+        ) {
+            Register()
+        }
     }
 }
 
@@ -67,4 +73,7 @@ fun GreetingPreview() {
 
 object AppScreen {
     const val LOGIN = "login"
+    const val MAIN = "main"
+    const val REGISTER = "register"
+
 }
