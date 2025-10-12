@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Chatting</string>
+
+    // NavigationBar
+    <string name="message">Message</string>
+    <string name="contact">Contact</string>
+    <string name="explore">Explore</string>
 </resources>

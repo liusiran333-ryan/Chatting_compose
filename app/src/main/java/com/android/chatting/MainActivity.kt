@@ -13,6 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
+import com.android.chatting.screens.appScaffold.AppScaffold
 import com.android.chatting.screens.login.Login
 import com.android.chatting.screens.register.Register
 import com.android.chatting.ui.theme.ChattingTheme
@@ -51,6 +52,11 @@ fun ChattyNavHost(navController: NavHostController) {
             AppScreen.REGISTER
         ) {
             Register()
+        }
+        composable(
+            AppScreen.MAIN
+        ) {
+            AppScaffold()
         }
     }
 }
