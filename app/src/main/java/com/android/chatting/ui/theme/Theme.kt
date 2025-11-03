@@ -12,6 +12,7 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.compositionLocalOf
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
@@ -23,6 +24,11 @@ import androidx.compose.ui.platform.LocalContext
 val LocalChattingColors = compositionLocalOf {
     ChattingColors()
 }
+
+val MaterialTheme.chattingColors: ChattingColors
+@Composable
+@ReadOnlyComposable
+get() = LocalChattingColors.current
 
 interface IChattingColors {
     val backgroundColor @Composable get() = Color.Black
