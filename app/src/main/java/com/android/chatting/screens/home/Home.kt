@@ -31,7 +31,7 @@ fun Home(drawerState: DrawerState) {
                     item.mid
                 }
             ) { _, item ->
-//                FriendMessage
+                FriendMessageItem(item.userProfile, item.lastMsg, item.unreadCount)
             }
         }
     }

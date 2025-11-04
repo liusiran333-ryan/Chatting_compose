@@ -82,4 +82,6 @@ object AppScreen {
     const val MAIN = "main"
     const val REGISTER = "register"
 
+    const val CONVERSATION = "conversation"
+
 }

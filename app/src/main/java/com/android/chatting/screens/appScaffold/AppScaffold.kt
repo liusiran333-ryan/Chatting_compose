@@ -1,6 +1,7 @@
 package com.android.chatting.screens.appScaffold
 
 import androidx.activity.compose.BackHandler
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ModalNavigationDrawer
@@ -10,12 +11,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import com.android.chatting.screens.drawer.PersonalProfile
 import com.android.chatting.screens.home.Home
 import com.android.chatting.screens.login.Login
@@ -56,7 +57,10 @@ fun AppScaffold() {
                 count = BottomScreen.entries.size,
                 state = pagerState,
                 userScrollEnabled = false,
-                contentPadding = it
+                contentPadding = PaddingValues(
+                    top = 0.dp,
+                    bottom = it.calculateBottomPadding()
+                )
             ) { page ->
                 when(BottomScreen.entries[page]) {
                     BottomScreen.Message -> Home(drawerState)
