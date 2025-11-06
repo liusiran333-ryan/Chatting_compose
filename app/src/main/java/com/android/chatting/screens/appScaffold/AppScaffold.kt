@@ -17,6 +17,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.android.chatting.screens.customized.LineChartDemo
 import com.android.chatting.screens.drawer.PersonalProfile
 import com.android.chatting.screens.home.Home
 import com.android.chatting.screens.login.Login
@@ -64,7 +65,7 @@ fun AppScaffold() {
             ) { page ->
                 when(BottomScreen.entries[page]) {
                     BottomScreen.Message -> Home(drawerState)
-                    BottomScreen.Contact -> Register()
+                    BottomScreen.Contact -> LineChartDemo()
                     BottomScreen.Explore -> Login()
                 }
             }
